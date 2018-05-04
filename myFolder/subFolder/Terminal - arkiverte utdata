@@ -1,0 +1,104 @@
+Last login: Fri May  4 13:47:39 on console
+Heddas-MacBook-Pro:~ heddabrodtkorb$ cd
+Heddas-MacBook-Pro:~ heddabrodtkorb$ pwd
+/Users/heddabrodtkorb
+Heddas-MacBook-Pro:~ heddabrodtkorb$ ls
+Applications		Documents		Library			Pictures
+Creative Cloud Files	Downloads		Movies			Public
+Desktop			Dropbox			Music
+Heddas-MacBook-Pro:~ heddabrodtkorb$ 
+Heddas-MacBook-Pro:~ heddabrodtkorb$ cd desktop
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ ls
+Branding_Styretavla.pdf				Tema8
+Git-it-Mac-x64					The Hemsedal Collection versjon 4.aep
+GitHub Desktop.app				Wakefy-0.2.1.dmg
+MASTER (konvertert).mov				git-2.16.3-intel-universal-mavericks.dmg
+RYDDE!!						html5-boilerplate_v6
+Skjermbilde 2018-04-30 kl. 19.22.33.png		illustrasjon_brannslukningapp.pdf
+Skjermbilde 2018-05-03 kl. 21.18.24.png		typewolf_best_sites
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ mkdir
+usage: mkdir [-pv] [-m mode] directory ...
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ mkdir myFolder
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ ls
+Branding_Styretavla.pdf				The Hemsedal Collection versjon 4.aep
+Git-it-Mac-x64					Wakefy-0.2.1.dmg
+GitHub Desktop.app				git-2.16.3-intel-universal-mavericks.dmg
+MASTER (konvertert).mov				html5-boilerplate_v6
+RYDDE!!						illustrasjon_brannslukningapp.pdf
+Skjermbilde 2018-04-30 kl. 19.22.33.png		myFolder
+Skjermbilde 2018-05-03 kl. 21.18.24.png		typewolf_best_sites
+Tema8
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ touch file1.txt
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ ls
+Branding_Styretavla.pdf				The Hemsedal Collection versjon 4.aep
+Git-it-Mac-x64					Wakefy-0.2.1.dmg
+GitHub Desktop.app				file1.txt
+MASTER (konvertert).mov				git-2.16.3-intel-universal-mavericks.dmg
+RYDDE!!						html5-boilerplate_v6
+Skjermbilde 2018-04-30 kl. 19.22.33.png		illustrasjon_brannslukningapp.pdf
+Skjermbilde 2018-05-03 kl. 21.18.24.png		myFolder
+Tema8						typewolf_best_sites
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ cp file1.txt to mtFolder
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ touch file2.txt to myFolder
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ touch file3.txt to "myFolder"
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ mkdir subFolder
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ pwd
+/Users/heddabrodtkorb/desktop
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ cp file3.txt Nano
+cp: file3.txt: No such file or directory
+Heddas-MacBook-Pro:desktop heddabrodtkorb$ nano file3.txt
+
+  GNU nano 2.0.6                               File: file3.txt                                                            Modified  
+
+Dette er en kort melding som jeg lagrer!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help           ^O WriteOut           ^R Read File          ^Y Prev Page          ^K Cut Text           ^C Cur Pos
+^X Exit               ^J Justify            ^W Where Is           ^V Next Page          ^U UnCut Text         ^T To Spell

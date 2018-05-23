@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("img/potet_bkg_rød.png") rgb(255, 154, 136);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    text-align: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+}
+
+.title {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding: 0 15px 0 0;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    padding-top: 30px;
+    list-style: none;
+    min-width: 400px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    text-align: center;
+
+}
+.button {
+    text-align: center;
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    outline: none;
+}

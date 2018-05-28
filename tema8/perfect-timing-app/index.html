@@ -23,7 +23,7 @@
     <h1 class="title">Kok potetene perfekt!</h1>
 
     <div class="wrapper">
-        <div class="potatogroup potatogroup1" data-counter-duration="25">
+        <div class="potatogroup potatogroup1">
             <img src="img/potetklynge_1.png" alt="langtidskokte potetsorter">
             <div class="potetsorter">
                 <div class="Folva">
@@ -49,7 +49,7 @@
         </div>
 
 
-        <div class="potatogroup potatogroup2" data-counter-duration="20">
+        <div class="potatogroup potatogroup2">
             <img src="img/potetklynge_2.png" alt="middeltidskokte potetsorter">
 
 
@@ -105,8 +105,99 @@
         <li>Skrubb eller skrell potetene og legg dem i kokende lettsaltet vann. Sett på timeren og klikk på start! Nedtelling tilpasset din valgte potetsort er nå i gang. Skru ned varmen når potetene er i kjelen – de skal ikke fosskoke. Til slutt sjekker du med en gaffel om poteten sklir av, da er poteten perfekt!</li>
     </ol>
 
-    <script src="script.js"></script>
 
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+
+                
+        var duration = {
+            "min": 0,
+            "sec": 0
+        };
+
+        var timeTextObject = document.querySelector('.duration__time');
+        var unitTextObject = document.querySelector('.duration__unit');
+        var startButton = document.getElementsByClassName('start-btn');
+        var body = document.body;
+
+        for (var i = 0; i < startButton.length; i++) {
+            startButton[i].addEventListener('click', knappetrykkFunksjon);
+        }
+
+        function knappetrykkFunksjon(event){
+
+            //Skjule knappen etter at den er trykket på
+            duration.min = this.dataset.counterDuration;
+            console.log(duration.min);
+
+            this.parentNode.classList.add('active');
+
+            unitTextObject.classList.add('hidden');
+
+            body.classList.add('active');
+
+            // Start interval timer
+            var intervalObj = setInterval(handleInterval, 1000);
+
+            function handleInterval(){
+                
+                if(duration.min == 0 && duration.sec == 0){
+
+                    clearInterval(intervalObj);
+                    playAlarm("Perfect timing!");
+                } else{
+                    
+                    countDown();   
+                    showDuration();
+                }
+            }
+        }
+
+        // Nedtellingsfunksjon
+        function countDown(){    
+            duration.sec = duration.sec - 1;
+        
+            if(duration.sec < 0){
+                duration.min = duration.min - 1;
+                duration.sec = 59;
+            }
+
+            console.log(duration);   
+        }
+
+        function showDuration(){
+
+            var min = duration.min;
+            var sec = duration.sec;
+
+            if(min < 10) {
+                min = '0' + min;
+            }
+            if(sec < 10) {
+                sec = '0' + sec;
+            }
+
+            timeTextObject.textContent = min +':'+ sec;
+        }
+
+        function playAlarm(text){
+            timeTextObject.textContent = text;
+            setTimeout(resetClock, 3000);
+        }
+
+        function resetClock(){
+            
+            duration.min = pomodoroMin;
+            timeTextObject.textContent = duration.min;
+            
+            startButton.classList.remove('hidden');
+            unitTextObject.classList.remove('hidden');
+            body.classList.remove('active');   
+        }
+
+
+    </script>
 
 </body>
 

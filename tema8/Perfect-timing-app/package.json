@@ -1,0 +1,16 @@
+{
+  "name": "perfect-timing-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.2",
+    "electron-packager": "^12.1.0"
+  }
+}

@@ -13,6 +13,17 @@ body {
     position: relative;
 }
 
+body.active .button-wrapper.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+body.active .button-wrapper{
+    opacity: .3;
+    pointer-events: none;
+}
+
+
 .logo {
     text-align: center;
     align-content: center;
@@ -164,7 +175,8 @@ Timer
 }
 
 .duration__time.small {
-    font-size: 12px;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .duration__unit {

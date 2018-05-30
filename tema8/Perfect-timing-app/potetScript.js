@@ -1,6 +1,11 @@
+var electron = require("electron");
+var ipcRenderer = electron.ipcRenderer;
+
+
+
 var duration = {
     "min": 0,
-    "sec": 0,
+    "sec":2,
     "initialMin": ""
 };
 
@@ -103,6 +108,9 @@ function showDuration() {
 
 function playAlarm(text) {
     timeTextObject.textContent = text;
+
+    ipcRenderer.sendSync('counterDone', text);
+
 }
 
 function resetClock() {

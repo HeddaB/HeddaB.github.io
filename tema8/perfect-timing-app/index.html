@@ -132,7 +132,7 @@
             unitTextObject = textTargetElement.querySelector('.duration__unit');
 
             this.parentNode.classList.add('active');
-            unitTextObject.classList.add('hidden');
+            //unitTextObject.classList.add('hidden');
 
             body.classList.add('active');
 
@@ -145,6 +145,8 @@
 
                     clearInterval(intervalObj);
                     playAlarm("Perfect timing!");
+                    timeTextObject.classList.add('small');
+                    unitTextObject.classList.add('hidden');
                 } else {
 
                     countDown();
@@ -194,6 +196,7 @@
 
 
             unitTextObject.classList.remove('hidden');
+            timeTextObject.classList.remove('small');
             body.classList.remove('active');
         }
     </script>

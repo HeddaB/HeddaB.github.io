@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect timing</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="logo">
+        <img src="img/pt_sortrød.png" alt="logo">
+    </div>
+
+    <h1 class="title">Kok potetene perfekt!</h1>
+
+    <div class="wrapper">
+        <div class="potatogroup potatogroup1">
+            <img src="img/potetklynge_1.png" alt="langtidskokte potetsorter">
+            <div class="potetsorter">
+                <ul class="potetsorter">
+                    <li>Folva</li>
+                    <li>Beate</li>
+                    <li>Astrix</li>
+                </ul>
+
+            </div>
+            <div class="duration-wrapper" id="duration-wrapper-1">
+                <!--Block -->
+                <span class="duration__time">25</span>
+                <span class="duration__unit">min</span>
+            </div>
+            <div class="button-wrapper">
+                <button class="start-btn" data-counter-duration="0" data-text-target="duration-wrapper-1">Start timing!</button>
+                <button class="reset-btn">Nullstill</button>
+            </div>
+        </div>
+
+
+        <div class="potatogroup">
+            <img src="img/potetklynge_2.png" alt="middeltidskokte potetsorter">
+
+
+            <ul class="potetsorter">
+                <li>Pimpernel</li>
+                <li>Kerrs Pink</li>
+                <li>Gulløye</li>
+            </ul>
+
+            <div class="duration-wrapper" id="duration-wrapper-2">
+                <!--Block -->
+                <span class="duration__time">20</span>
+                <span class="duration__unit">min</span>
+            </div>
+            <div class="button-wrapper">
+                <button class="start-btn" data-counter-duration="20" data-text-target="duration-wrapper-2">Start timing!</button>
+                <button class="reset-btn">Nullstill</button>
+            </div>
+
+
+        </div>
+
+
+        <div class="potatogroup">
+            <img src="img/mandelpotet2.png" alt="kortidskokte potetsorter">
+
+            <div class="potetsorter">
+                <ul class="Mandelpoteter">
+                    <li>Mandelpoteter</li>
+                </ul>
+            </div>
+
+            <div class="duration-wrapper" id="duration-wrapper-3">
+                <!--Block -->
+                <span class="duration__time">7</span>
+                <span class="duration__unit">min</span>
+            </div>
+            <div class="button-wrapper">
+                <button class="start-btn" data-counter-duration="7" data-text-target="duration-wrapper-3">Start timing!</button>
+                <button class="reset-btn">Nullstill</button>
+            </div>
+
+        </div>
+
+    </div>
+    <ol>
+        <li>Skrubb eller skrell potetene og legg dem i kokende lettsaltet vann. Sett på timeren og klikk på start! Nedtelling
+            tilpasset din valgte potetsort er nå i gang. Skru ned varmen når potetene er i kjelen – de skal ikke fosskoke.
+            Til slutt sjekker du med en gaffel om poteten sklir av, da er poteten perfekt!</li>
+    </ol>
+
+
+    <script>
+        // You can also require other files to run in this process
+        require('./renderer.js')
+
+
+        var duration = {
+            "min": 0,
+            "sec": 3,
+            "initialMin": ""
+        };
+
+        var timeTextObject,
+            unitTextObject;
+
+        var startButton = document.getElementsByClassName('start-btn');
+        var body = document.body;
+
+        for (var i = 0; i < startButton.length; i++) {
+            startButton[i].addEventListener('click', knappetrykkFunksjon);
+        }
+
+        function knappetrykkFunksjon(event) {
+
+            //Skjule knappen etter at den er trykket på
+            duration.min = this.dataset.counterDuration;
+            duration.initialMin = this.dataset.counterDuration;
+
+            var textTargetElement = document.getElementById(this.dataset.textTarget);
+
+            timeTextObject = textTargetElement.querySelector('.duration__time');
+            unitTextObject = textTargetElement.querySelector('.duration__unit');
+
+            this.parentNode.classList.add('active');
+            unitTextObject.classList.add('hidden');
+
+            body.classList.add('active');
+
+            // Start interval timer
+            var intervalObj = setInterval(handleInterval, 1000);
+
+            function handleInterval() {
+
+                if (duration.min == 0 && duration.sec == 0) {
+
+                    clearInterval(intervalObj);
+                    playAlarm("Perfect timing!");
+                } else {
+
+                    countDown();
+                    showDuration();
+                }
+            }
+        }
+
+        // Nedtellingsfunksjon
+        function countDown() {
+            duration.sec = duration.sec - 1;
+
+            if (duration.sec < 0) {
+                duration.min = duration.min - 1;
+                duration.sec = 59;
+            }
+
+            console.log(duration);
+        }
+
+        function showDuration() {
+
+            var min = duration.min;
+            var sec = duration.sec;
+
+            if (min < 10) {
+                min = '0' + min;
+            }
+            if (sec < 10) {
+                sec = '0' + sec;
+            }
+
+            timeTextObject.textContent = min + ':' + sec;
+        }
+
+        function playAlarm(text) {
+            timeTextObject.textContent = text;
+            setTimeout(resetClock, 10000);
+        }
+
+        function resetClock() {
+
+            duration.min = duration.initialMin;
+            duration.sec = 0;
+
+            timeTextObject.textContent = duration.min;
+
+
+            unitTextObject.classList.remove('hidden');
+            body.classList.remove('active');
+        }
+    </script>
+
+</body>
+
+
+</html>

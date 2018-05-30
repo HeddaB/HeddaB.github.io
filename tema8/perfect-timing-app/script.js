@@ -34,7 +34,9 @@ function knappetrykkFunksjon(event){
     this.parentNode.classList.add('active');
 
 
-    unitTextObject.classList.add('hidden');
+    //unitTextObject.classList.add('hidden');
+    console.log('test');
+    
 
     body.classList.add('active');
 
@@ -47,6 +49,7 @@ function knappetrykkFunksjon(event){
 
             clearInterval(intervalObj);
             playAlarm("Perfect timing!");
+            //unitTextObject.classList.add('hidden');
         } else{
             
             countDown();   
@@ -65,7 +68,7 @@ function countDown(){
     }
     console.log(duration);   
 }
-
+// Vis nedtelling
 function showDuration(){
 
     var min = duration.min;
@@ -80,12 +83,12 @@ function showDuration(){
 
     timeTextObject.textContent = min +':'+ sec;
 }
-
+// Signalisere at nedtelling er over
 function playAlarm(text){
-    timeTextObject.textContent = text;
-    setTimeout(resetClock, 3000);
+timeTextObject.textContent = text;
+setTimeout(resetClock, 3000);
 }
-
+// Nullstill klokken
 function resetClock(){
     
     duration.min = pomodoroMin;

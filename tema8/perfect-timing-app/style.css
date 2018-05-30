@@ -163,6 +163,10 @@ Timer
     padding-top: 20px;
 }
 
+.duration__time.small {
+    font-size: 12px;
+}
+
 .duration__unit {
     font-size: 1rem;
     font-weight: 400;
@@ -226,5 +230,9 @@ Timer
 }
 
 .invisible {
+    display: none;
+}
+
+.duration__unit.hidden {
     display: none;
 }

@@ -49,13 +49,12 @@ a {
 
 .download-button {
     background: rgb(238, 56, 47);
-    box-shadow: 3px 3px 10px rgba(174, 21, 21, 0.8);
     border-radius: 5px;
     text-align: center;
     width: 140px;
     height: 40px;
     padding: 15px;
-    margin-top: 200px;
+    margin-top: 400px;
 }
 
 

@@ -3,6 +3,11 @@ const {
   app,BrowserWindow,ipcMain,Notification
 } = require('electron')
 
+const path = require('path')
+const nativeImage = electrn.nativeImage;
+
+let perfectTimingIcon = nativeImage.createFromPath(path.join(__dirname, 'app-icons/PerfectTimingIcon_1024x1024.icns'))
+
 
 
 // Keep a global reference of the window object, if you don't, the window will

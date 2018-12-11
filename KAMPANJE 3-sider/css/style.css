@@ -1,0 +1,691 @@
+@charset "UTF-8";
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  width: 30px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+
+}
+
+h2 {
+  color: rgb(238, 149, 122);
+  text-transform: uppercase;
+  font-size: 12px;
+
+}
+
+h3 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 30px;
+  line-height: 70px;
+  color: rgb(224, 170, 154);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+}
+
+h4 {
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 2;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h5 {
+  color: #626262;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+a {
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+ul {
+  letter-spacing: 1px;
+}
+
+li {
+  color: #626262;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+
+p {
+  font-family: "raleway", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 2;
+}
+
+span {
+  color: rgb(238, 149, 122);
+
+}
+
+.img-fluid {
+  height: 174px;
+  width: 174px;
+}
+
+img {
+  width: 80%;
+}
+
+.container-full {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.payment {
+  background: rgb(238, 149, 122);
+  border-color: rgb(238, 149, 122);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  border-radius: 2px;
+  line-height: 1;
+  color: #fff;
+  padding: 0px 2px 0px 2px;
+  font-size: 16px;
+
+}
+
+
+.btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 15px 15px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: rgb(238, 149, 122);
+  line-height: 1;
+  color: #fff;
+  padding: 7px 12px 13px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: #626262;
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: rgb(226, 109, 101);
+  color: #fff;
+  outline: none;
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0px;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+
+#header #logo {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+
+#header #logo img {
+  width: 100px;
+
+}
+
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+.padd-section {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+@media (max-width: 992px) {
+  .padd-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.section-title {
+  margin-bottom: 80px;
+  margin-left: 130px;
+  margin-right: 130px;
+}
+
+
+@media (max-width: 992px) {
+  .section-title {
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.section-title h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.section-title p {
+  font-size: 20px;
+}
+
+.section-title .separator {
+  margin: 0;
+}
+
+
+.separator {
+  color: #626262;
+  font-family: "raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+@media (max-width: 575px) {
+  .separator {
+    font-size: 16px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/leogrønn.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+ .front {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/pikegrønn.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: all 3s ease-in-out;
+  transition-timing-function: 3s ease-in-out;
+
+
+  animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 4;
+	animation-duration: 4s;
+	animation-direction: alternate;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+  
+
+
+@media (min-width: 1025px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+#hero .hero-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 80px;
+  line-height: 150px;
+  font-family: 'Rock Salt', cursive;
+  color: white;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  right: 20%;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 50px;
+    line-height: 90px;
+  }
+}
+
+#hero img {
+  max-width: 100%;
+}
+
+.herobtn {
+  position: absolute;
+  
+}
+
+#hero .btn-get-started {
+  transition: 0.5s;
+  color: white;
+  background-color: rgb(238, 149, 122);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding-top:3px;
+  text-decoration: none;
+  position: absolute;
+  margin-top: -240px;
+}
+
+#hero .btn-get-started:hover {
+  color: rgb(52, 82, 52);
+}
+
+@media (max-width: 575px) {
+  #hero .btn-get-started{
+  margin-top: -225px;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .btns a {
+    margin: 2px 2px;
+  }
+}
+
+#hero .btns a:hover {
+  color: rgb(122, 136, 112);
+}
+
+
+
+/* About Us Section
+--------------------------------*/
+.about-us-full-section {
+  background-color: rgb(21, 31, 21);
+  background: url(../img/elefanter_grønn.jpg) center center no-repeat;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+#about-us img {
+  max-width: 100%;
+}
+
+#about-us .about-content {
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 110px;
+  margin-right: 110px;
+  line-height: 30px;
+}
+
+@media (max-width: 575px) {
+  #about-us .about-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+#about-us .about-content h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 575px) {
+  #about-us .about-content h3 {
+    font-size: 20px;
+    margin-top: -15px;
+    margin-right: 20px;
+  }
+}
+
+#about-us .about-content p {
+  color: white;
+  font-weight: 200;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 575px) {
+  #about-us .about-content p {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+#about-us .about-content span {
+  font-weight: 300;
+  padding-right: 10px;
+  font-size: 20px;
+
+}
+
+#about-us .about-content ul li .fa {
+  padding-right: 20px;
+}
+
+.payment {
+  width: 130px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 14px;
+  transition: 0.3s;
+  outline: none;
+  margin-bottom: 50px;
+
+}
+
+.payment:hover {
+  background-color: rgb(226, 109, 101);
+  outline-color: rgb(226, 109, 101);
+  transition: 0.3s;
+}
+
+/* Features Section
+--------------------------------*/
+#features {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+#features .feature-block {
+  background: #fff none repeat scroll 0 0;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#features .feature-block:hover {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#features .feature-block h4 {
+  margin-bottom: 20px;
+}
+
+#features .feature-block p {
+  margin-bottom: 0;
+  line-height: 24px;
+}
+
+
+#features .img-fluid {
+  width: 80%;
+  height: 80%;
+}
+
+.thankyou {
+  display: inline-block;
+  position: relative;
+  width: 70%vw;
+  letter-spacing: 2px;
+}
+
+.donation-text p {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 200;
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+
+
+/* Newsletter Section
+--------------------------------*/
+#newsletter {
+  background: transparent url(../img/regnskog.jpg) no-repeat center top fixed;
+  background-size: cover;
+}
+
+#newsletter .overlay {
+  background: linear-gradient(rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.2) 95%);
+  height: 100%;
+  width: 100%;
+}
+
+#newsletter .form-control {
+  background-color: transparent;
+  border: 1px solid #dddddd;
+  border-radius: 0;
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  height: 50px;
+  text-align: center;
+  width: 70%;
+  background: #fff;
+}
+
+@media (max-width: 575px) {
+  #newsletter .form-control {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+#newsletter .form-control:focus {
+  border-color: rgb(238, 149, 122);
+  box-shadow: none;
+  outline: 0 none;
+}
+
+#newsletter .btn {
+  background: rgb(56, 68, 56);
+  border: 0;
+  border-radius: 0;
+  height: 50px;
+  width: 30%;
+  transition: 0.3s;
+}
+
+@media (max-width: 575px) {
+  #newsletter .btn {
+    width: 100%;
+  }
+}
+
+#newsletter .btn:hover {
+  background: rgb(122, 136, 112);
+}
+
+#newsletter .btn .fa {
+  padding-right: 10px;
+}
+
+#newsletter ul {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+#newsletter ul li {
+  background: rgb(56, 68, 56);
+  border-radius: 50px;
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 35px;
+  transition: 0.3s;
+}
+
+#newsletter ul li:hover {
+  background: rgb(122, 136, 112);
+  transition: 0.3s;
+}
+
+#newsletter ul li .fa {
+  color: #fff;
+}
+
+.subscribe-text {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  background: rgb(21, 31, 21);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer .footer-logo .navbar-brand {
+  color: #fff;
+  display: inline-block;
+  float: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  height: 100%;
+  letter-spacing: 0.2em;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.footer .footer-logo p {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.footer .list-menu>h4 {
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.footer .list-menu ul li a {
+  color: #fff;
+  font-size: 12px;
+  padding-left: 5px;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+.footer .copyrights {
+  background: #fff;
+  margin-top: 50px;
+  text-align: center;
+  padding: 25px;
+}
+
+.footer .copyrights p,
+.footer .copyrights .credits {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.footer .copyrights p a,
+.footer .copyrights .credits a {
+  letter-spacing: 0;
+  color: rgb(122, 136, 112);
+}

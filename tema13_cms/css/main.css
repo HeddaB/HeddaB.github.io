@@ -1,0 +1,494 @@
+/* ------------------------------------------------------------------------------
+	Typography
+-------------------------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Source%20Sans%20Pro:300,400,500,600,700);
+
+p {
+	font-size: 14px;
+	line-height: 22.4px;
+	color: black;
+	font-family: "MaisonNeueTrial-Regular", sans-serif;
+}
+
+h1 {
+	font-size: 80px;
+	color: #a89070;
+	font-weight: 400;
+	font-family: "MaisonNeueMonoTrial-Regular", sans-serif;
+	line-height: 60px;
+}
+
+h2 {
+	font-size: 30x;
+	color: #ba7b27;
+	font-family: "MaisonNeueTrial-Regular", sans-serif;
+}
+
+h3 {
+	font-size: 18px;
+	color: black;
+	font-weight: 100;
+	letter-spacing: 2px;
+	font-family: "MaisonNeueExtendedTrial-Medium", sans-serif;
+}
+
+h4 {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #a89070;
+	font-weight: 600;
+	font-family: "MaisonNeueExtendedTrial-Medium", sans-serif;
+	letter-spacing: 1px;
+}
+
+h5 {
+	font-size: 14px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-family: "MaisonNeueExtendedTrial-Medium", sans-serif;
+}
+
+.btn {
+	background-color: #ba7b27;
+	color: rgb(165, 165, 165);
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 5px;
+	border: 0;
+	border-radius: 2px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: #3d3d3d;
+	color: #fff;
+}
+
+.btn-large {
+	padding: 15px 40px;
+}
+
+
+
+/* ------------------------------------------------------------------------------
+	Global Styles
+-------------------------------------------------------------------------------*/
+a {
+	color: #8d8d8d;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	transition: background-color, color, 0.3s;
+}
+
+body {
+	font-family: "MaisonNeueMonoTrial-Regular", sans-serif;
+	font-weight: 400;
+	color: #464646;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+.section {
+	padding: 100px 0;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.no-gutter [class*=col-] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.space {
+	margin-top: 60px;
+}
+
+/* ------------------------------------------------------------------------------
+	 Header
+-------------------------------------------------------------------------------*/
+#header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+#header .header-content {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 60px 0;
+	width: 100%;
+	transition: padding 0.3s;
+}
+
+#header .logo {
+	float: left;
+	width: 1rem;
+}
+
+
+
+#header.fixed {
+	background-color: white;
+}
+
+#header.fixed .header-content {
+	border-bottom: 0;
+	padding: 25px 0;
+}
+
+#header.fixed .nav-toggle {
+	top: 18px;
+}
+
+.navigation.open {
+	opacity: 0.9;
+	visibility: visible;
+	transition: opacity 0.5s;
+}
+
+.navigation {
+	float: right;
+}
+
+.navigation li {
+	display: inline-block;
+}
+
+.navigation a {
+	color: #a89070;
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 40px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-family: "MaisonNeueExtendedTrial-Regular", sans-serif;
+}
+
+.navigation a:hover {
+	color: #8d8d8d;
+}
+
+.navigation a.active {
+	color: black;
+
+}
+
+.nav-toggle {
+	display: none;
+	height: 44px;
+	overflow: hidden;
+	position: fixed;
+	right: 5%;
+	text-indent: 100%;
+	top: 32px;
+	white-space: nowrap;
+	width: 44px;
+	z-index: 99999;
+	transition: all 0.3s;
+}
+
+.nav-toggle:before,
+.nav-toggle:after {
+	border-radius: 50%;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	transition-property: transform;
+}
+
+.nav-toggle:before {
+	background-color: #a89070;
+	transform: scale(1);
+	transition-duration: 0.3s;
+}
+
+.nav-toggle:after {
+	background-color: #a89070;
+	transform: scale(0);
+	transition-duration: 0s;
+}
+
+.nav-toggle span {
+	background-color: white;
+	bottom: auto;
+	display: inline-block;
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	right: auto;
+	top: 50%;
+	width: 18px;
+	z-index: 10;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.nav-toggle span:before,
+.nav-toggle span:after {
+	background-color: #fff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	transition: transform 0.3s;
+}
+
+.nav-toggle span:before {
+	transform: translateY(-6px) rotate(0deg);
+}
+
+.nav-toggle span:after {
+	transform: translateY(6px) rotate(0deg);
+}
+
+.nav-toggle.close-nav:before {
+	transform: scale(0);
+}
+
+.nav-toggle.close-nav:after {
+	transform: scale(1);
+}
+
+.nav-toggle.close-nav span {
+	background-color: #a89070;
+}
+
+.nav-toggle.close-nav span:before,
+.nav-toggle.close-nav span:after {
+	background-color: #fff;
+}
+
+.nav-toggle.close-nav span:before {
+	transform: translateY(0) rotate(45deg);
+}
+
+.nav-toggle.close-nav span:after {
+	transform: translateY(0) rotate(-45deg);
+}
+
+/* ------------------------------------------------------------------------------
+	 Herobanner
+-------------------------------------------------------------------------------*/
+
+.banner {
+	/*background-image: url(../images/banner.jpg);*/
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	background-color:#d6d3ce;
+
+}
+
+.banner-text {
+	padding-top: 25%;
+
+}
+
+.fadingEffect {
+    position:absolute;
+	top:0; bottom:0; right:0;
+    width:100%;
+    background:white;
+    animation: showHide 8s ease-in alternate infinite;
+}
+
+
+@keyframes showHide {
+    0% {width:100%}
+    40% {width:0%}
+    60% {width:0%;}
+	100% {width:100%;}
+}
+
+
+
+.banner-text h1 {
+	font-family: "MaisonNeueMonoTrial-Regular", sans-serif;
+	font-size: 8rem;
+	font-weight: 800;
+	text-align: left;
+	text-transform: capitalize;
+	overflow: hidden;
+	position: relative;
+	color: whitegreen;
+	line-height: 100px;
+	padding-bottom: 60px;
+
+}
+
+
+.banner-text p {
+	font-family: "MaisonNeueMonoTrial-Regular", sans-serif;
+	color: #8d8d8d;
+	font-size: 3rem;
+	font-weight: 400;
+	letter-spacing: 3px;
+	margin-top: 30px;
+	margin-left: 20%;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.bannerarrow {
+	margin-right: 50%;
+	margin-left: 50%;
+
+}
+
+/* ------------------------------------------------------------------------------
+	CV
+-------------------------------------------------------------------------------*/
+.cv-section {
+	padding-top: 30px;
+	margin-left: 100px;
+	margin-right: 100px;
+	background-color: white;
+}
+
+.cv .container {
+	padding: 30px;
+	border: 1pt solid black;
+}
+
+.cv {
+	margin-bottom: 50px;
+}
+
+.cv-content {
+	padding: 0 15px;
+	margin-top: 30px;
+}
+
+
+/* ------------------------------------------------------------------------------
+	Arbeider section
+-------------------------------------------------------------------------------*/
+
+
+.arbeider {
+	background-color: #c2bab0;
+	position: relative;
+	margin-left: 120px;
+	margin-right: 120px;
+	margin-bottom: 100px;
+}
+
+.arbeider blockquote {
+	border: 0;
+	margin: 0;
+	padding: 80px 20% 0;
+}
+
+.arbeider h1 {
+	color: white;
+	font-weight: 200;
+	letter-spacing: 1px;
+	font-family: "MaisonNeueExtendedTrial-Regular", sans-serif;
+	font-size: 18px;
+}
+
+.arbeider p {
+	color: white;
+	display: block;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 100;
+	margin-top: 30px;
+	font-family: "MaisonNeueNarrowTrial-Regular", sans-serif;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------
+	 Footer
+-------------------------------------------------------------------------------*/
+.footer {
+	text-align: left;
+	margin-right: 600px;
+}
+
+.footer-top {
+	background-color: white;
+	border: 1 pt solid black;
+	padding-top: 50px;
+}
+
+.footer-bottom {
+	background-color: white;
+	padding: 20px 0;
+}
+
+.footer .footer-col {
+	margin-bottom: 80px;
+	margin-right: 30px;
+	margin-left: 100px;
+}
+
+.footer h5 {
+	color: black;
+	margin-bottom: 20px;
+	font-weight: 300;
+}
+
+
+.footer p {
+	color: black;
+	margin-left: 120px;
+}
+
+.footer a {
+	color: rgba(255, 255, 255, 0.767);
+}
+
+.footer a:hover {
+	color: 00bb6d;
+}
+
+.footer .footer-share {
+	margin-top: 0;
+}
+
+.footer .footer-share li {
+	display: inline-block;
+	float: none;
+}
+
+.footer .footer-share a {
+	border: none;
+	font-size: 21px;
+	color: #ba7b27;
+}
+
+.footer .fa-heart {
+	color: 00bb6d;
+	font-size: 11px;
+	margin: 0 2px;
+}
